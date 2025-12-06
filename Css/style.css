@@ -21,13 +21,8 @@ ul {
 #title {
   text-align: center;
   font-size: 50px;
-  padding-right: 250px;
   justify-content: center;
-}
-
-/* to make the links up left the page */
-#left-links {
-  display: flex;
+  margin-right: 70px;
 }
 
 .ulHead {
@@ -55,3 +50,72 @@ a {
   height: 50px;
   border-radius: 10px;
 }
+
+#process-section {
+  background: gray;
+  display: flex;
+  justify-content:center;
+  font-size: 60px
+}
+
+#process-section button {
+  padding: 0px 80px;
+  margin: 0px 70px;
+  border-radius: 10px;
+  font-size: 25px;
+  background: deeppink;
+}
+
+
+#card-container {
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+background: linear-gradient( rgba(100, 100, 0, 0.4),  rgba(100, 100, 100, 1)    
+);
+  color: aliceblue;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 100px;  
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  background-image: url('../images/10104821.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 8px;
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+
+
+
+
+
+#footer {
+  background: gray;
+  font-size: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
