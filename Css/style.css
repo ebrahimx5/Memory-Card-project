@@ -68,6 +68,18 @@ a {
   cursor: pointer;
 }
 
+#try {
+  background: gray;
+  text-align: center;
+}
+
+
+#try-count {
+  font-size: 50px;
+  margin-right: 33px;
+
+}
+
 #card-container {
   display: flex;
   flex-direction: column;
@@ -98,7 +110,18 @@ a {
   margin: 10px 0px;
 }
 
+
+#left-edge {
+  text-align: left;
+  background:goldenrod;
+  background-position: 2px;
+}
+#right-edge {
+  text-align: right;
+}
+
+  
 #footer {
   background: gray;
-  font-size: 80px;
+  font-size: 50px;
 }
