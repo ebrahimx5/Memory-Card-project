@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+
 }
 /* adjust the head page */
 #head {
@@ -10,7 +11,7 @@
   padding: 20px;
   background:rgba(0, 0, 0, 0.863);
   color: aliceblue;
-  height: 200px;
+  height: 100px;
 }
 
 /* rmove the dot from ul elements */
@@ -20,14 +21,14 @@ ul {
 
 #title {
   text-align: center;
-  font-size: 50px;
+  font-size: 30px;
   justify-content: center;
-  margin-right: 70px;
+  margin-right: 50px;
 }
 
 .ulHead {
   padding: 10px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 a {
@@ -47,7 +48,7 @@ a {
   background:dimgrey;
   color: aliceblue;
   width: 60px;
-  height: 50px;
+  height: 40px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -56,72 +57,77 @@ a {
   background: gray;
   display: flex;
   justify-content: center;
-  font-size: 60px;
+  font-size: 30px;
 }
 
 #process-section button {
-  padding: 0px 80px;
-  margin: 0px 70px;
+  padding: 5px 30px;
+  margin: 0px 40px;
   border-radius: 10px;
   font-size: 25px;
   background: rgb(255, 20, 20);
   cursor: pointer;
 }
 
-#try {
-  background: gray;
-  text-align: center;
-}
-
-
-#try-count {
-  font-size: 50px;
-  margin-right: 33px;
-
-}
 
 #card-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   background: linear-gradient(rgba(5, 5, 5, 0.4), rgb(250, 250, 250, 1));
+  
 }
 
 .row {
   display: flex;
   justify-content: center;
-  gap: 100px;
+  gap: 80px;
 }
 
 .card {
-  width: 200px;
-  height: 300px;
-  background-image: url("../images/10104821.jpg");
+  width: 90px;
+  height: 130px;
+  background: url("../images/10104821.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
   cursor: pointer;
   border-radius: 8px;
   border-radius: 10px;
   margin: 10px 0px;
 }
-
-
-#left-edge {
-  text-align: left;
-  background:goldenrod;
-  background-position: 2px;
-}
-#right-edge {
-  text-align: right;
-}
-
   
 #footer {
-  background: gray;
-  font-size: 50px;
+  /* background: rgb(36, 36, 36); */
+  display: flex;
+  padding: 15px;
+  
 }
+#bibf{
+  height:80px;
+  width: 80px;
+  margin:10px 0px 10px 5px;
+  border-radius: 10px;
+
+}
+
+#footer p {
+  color: aliceblue;
+  align-content:end;
+  margin:0px 0px 20px 20px;
+
+}
+
+
+#state {
+  background: #808080;
+  font-size: 40px;
+  text-align: center;
+  padding: 5px;
+
+}
+
+
+

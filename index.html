@@ -1,64 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Memory card</title>
-    <script src="./js/app.js"></script>
-    <link rel="stylesheet" href="./Css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Jersey+25&family=Londrina+Shadow&family=Tsukimi+Rounded&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="head">
-      <ul id="left-links">
-        <li class="ulHead"><a href="a"> Game Instruction </a></li>
-        <li class="ulHead"><a href="b"> How To Play </a></li>
-        <li class="ulHead">
-          <a href="c"> The benefits of Game </a>
-        </li>
-      </ul>
-      <div id="title">
-        <h1>Memory cards</h1>
-      </div>
-      <div id="sign-btn">
-        <button id="sign-up">Sign Up</button>
-        <button id="sign-in">Sign In</button>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory card</title>
+  <script defer src="./js/app.js"></script>
+  <link rel="stylesheet" href="./Css/style.css" />
+</head>
+
+<body>
+  <div id="head">
+    <ul id="left-links">
+      <li class="ulHead"><a href="a"> Game Instruction </a></li>
+      <li class="ulHead"><a href="b"> How To Play </a></li>
+      <li class="ulHead">
+        <a href="c"> The benefits of Game </a>
+      </li>
+    </ul>
+    <div id="title">
+      <h1>Memory cards</h1>
     </div>
-    <div id="process-section">
-      <button id="start">Start</button>
-      <p id="time">Time : 00:00</p>
-      <button id="end">End</button>
+    <div id="sign-btn">
+      <button id="sign-up">Sign Up</button>
+      <button id="sign-in">Sign In</button>
     </div>
-    <div id="try">
-      <p id="try-count">try : 5</p>
+  </div>
+  <div id="process-section">
+    <button id="start">Start</button>
+    <p id="time">Time : 00:60</p>
+  </div>
+  <div id="state">
+  <p id="state-text">Result</p>
+  </div>
+  <div id="card-container">
+    <div class="row">
+      <div class="card img1"></div>
+      <div class="card img2"></div>
+      <div class="card img3"></div>
+      <div class="card img4"></div>
     </div>
-    <div id="card-container">
-      <div class="row">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-      </div>
-      <div class="row">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-      </div>
-      <div class="row">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-      </div>
+    <div class="row">
+      <div class="card img5"></div>
+      <div class="card img6"></div>
+      <div class="card img1"></div>
+      <div class="card img2"></div>
     </div>
-    <div id="footer">
-      <p>4</p>
-      <p>5</p>
-      <p>5</p>
+    <div class="row">
+      <div class="card img3"></div>
+      <div class="card img4"></div>
+      <div class="card img5"></div>
+      <div class="card img6"></div>
     </div>
-  </body>
+  </div>
+  <div id="footer">
+    <img id="bibf" src="./images/download.png" alt="BIBF">
+    <p>© 2025 BIBF.</p>
+  </div>
+</body>
+
 </html>
