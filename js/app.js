@@ -33,6 +33,8 @@ let gameTime
 
 let ResetBackground = `url(./images/10104821.jpg)`
 
+let gameOver 
+
 //---------------------Functions-------------------------------
 
 // to compare between card 
@@ -65,11 +67,15 @@ function checkWinCondition() {
         console.log('YOU WIN')
         clearInterval(gameTime)
         stateElement.textContent = 'You Win'
+        gameOver = true
+        
     }
 }
 
 // to handle cards buttons
 const handleButton = (event) => {
+    if (gameOver) return;
+
     if (!card1 && !card2) {
         card1 = event.target
         event.target.style.backgroundImage = `url(./images/${card1.classList[1]}.jpg)`
@@ -87,6 +93,7 @@ function checkLose() {
         console.log('you lose')
         clearInterval(gameTime)
         stateElement.textContent = 'You Lose'
+        gameOver = true
 
     }
 }
@@ -117,6 +124,7 @@ function startGame() {
 
     startElement.disabled = true
 }
+
 
 
 //-----------------------------------------------Event Listener-----------------------------------
