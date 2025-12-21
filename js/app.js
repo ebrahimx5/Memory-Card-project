@@ -11,13 +11,10 @@ const startElement = document.querySelector('#start')
 
 const timeElement = document.querySelector('#time')
 
-const restartElement = document.querySelector('#restart')
-
 const stateElement = document.querySelector('#state-text')
 
 console.log(cardElement)
 //------------------------Viarble-----------------------------
-
 
 let start
 
@@ -37,40 +34,6 @@ let gameOver
 
 //---------------------Functions-------------------------------
 
-// to compare between card 
-
-const compareCards = () => {
-    if (card1.classList[1] === card2.classList[1]) {
-        console.log('Cards MATCH')
-        correct += 1
-        card1 = null
-        card2 = null
-        stateElement.textContent = 'Right'
-
-         checkWinCondition()
-    }
-    else {
-        console.log("WRONG CARD")
-
-        card1.style.backgroundImage = 'url(./images/10104821.jpg)'
-        card2.style.backgroundImage = 'url(./images/10104821.jpg)'
-        card1 = null
-        card2 = null
-        stateElement.textContent = 'Wrong'
-    }
-}
-
-// to check if user end all card and win 
-
-function checkWinCondition() {
-    if (correct === 6){
-        console.log('YOU WIN')
-        clearInterval(gameTime)
-        stateElement.textContent = 'You Win'
-        gameOver = true
-        
-    }
-}
 
 // to handle cards buttons
 const handleButton = (event) => {
@@ -85,6 +48,48 @@ const handleButton = (event) => {
         event.target.style.backgroundImage = `url(./images/${card2.classList[1]}.jpg)`
         setTimeout(() => { compareCards() }, 500)
     }
+
+}
+
+// to check if user end all card and win 
+
+function checkWinCondition() {
+    if (correct === 6){
+        console.log('YOU WIN')
+        clearInterval(gameTime)
+        stateElement.textContent = 'You Win'
+        gameOver = true
+        
+    }
+}
+
+// to compare between card 
+
+const compareCards = () => {
+
+    
+    if (card1.classList[1] === card2.classList[1]) {
+        console.log('Cards MATCH')
+        correct += 1
+
+        card1 = null
+        card2 = null
+        
+        stateElement.textContent = 'Right'
+        
+         checkWinCondition()   
+        
+    }
+
+    else {
+        console.log("WRONG CARD")
+
+        card1.style.backgroundImage = 'url(./images/10104821.jpg)'
+        card2.style.backgroundImage = 'url(./images/10104821.jpg)'
+        card1 = null
+        card2 = null
+        stateElement.textContent = 'Wrong'
+    }
 }
 
 // if time end the game will stop 
@@ -94,7 +99,6 @@ function checkLose() {
         clearInterval(gameTime)
         stateElement.textContent = 'You Lose'
         gameOver = true
-
     }
 }
 
@@ -111,21 +115,16 @@ function countdown() {
     }, 1000)
 }
 
-
 // to start the game and all function when user click on start button
 function startGame() {
+
     cardElement.forEach((oneCard) => {
         oneCard.addEventListener('click', handleButton)
-
-
-
     })
     countdown()
 
     startElement.disabled = true
 }
-
-
 
 //-----------------------------------------------Event Listener-----------------------------------
 startElement.addEventListener('click', startGame)
