@@ -1,8 +1,3 @@
-/* choose the important element 
-1. card
-2. start
-3. time
-*/
 
 //-----------------------Declare ELements-------------------- 
 const cardElement = document.querySelectorAll('.card')
@@ -34,9 +29,10 @@ let gameOver
 
 //---------------------Functions-------------------------------
 
-
 // to handle cards buttons
 const handleButton = (event) => {
+    if (card1 === event.target) return;
+    
     if (gameOver) return;
 
     if (!card1 && !card2) {
@@ -48,7 +44,30 @@ const handleButton = (event) => {
         event.target.style.backgroundImage = `url(./images/${card2.classList[1]}.jpg)`
         setTimeout(() => { compareCards() }, 500)
     }
+}
 
+
+// to compare between card 
+
+const compareCards = () => {
+    if (card1.classList[1] === card2.classList[1]) {
+        console.log('Cards MATCH')
+        correct += 1
+        card1 = null
+        card2 = null
+        stateElement.textContent = 'Right'
+
+         checkWinCondition()
+    }
+    else {
+        console.log("WRONG CARD")
+
+        card1.style.backgroundImage = 'url(./images/10104821.jpg)'
+        card2.style.backgroundImage = 'url(./images/10104821.jpg)'
+        card1 = null
+        card2 = null
+        stateElement.textContent = 'Wrong'
+    }
 }
 
 // to check if user end all card and win 
@@ -60,35 +79,6 @@ function checkWinCondition() {
         stateElement.textContent = 'You Win'
         gameOver = true
         
-    }
-}
-
-// to compare between card 
-
-const compareCards = () => {
-
-    
-    if (card1.classList[1] === card2.classList[1]) {
-        console.log('Cards MATCH')
-        correct += 1
-
-        card1 = null
-        card2 = null
-        
-        stateElement.textContent = 'Right'
-        
-         checkWinCondition()   
-        
-    }
-
-    else {
-        console.log("WRONG CARD")
-
-        card1.style.backgroundImage = 'url(./images/10104821.jpg)'
-        card2.style.backgroundImage = 'url(./images/10104821.jpg)'
-        card1 = null
-        card2 = null
-        stateElement.textContent = 'Wrong'
     }
 }
 
@@ -115,6 +105,7 @@ function countdown() {
     }, 1000)
 }
 
+
 // to start the game and all function when user click on start button
 function startGame() {
 
@@ -122,9 +113,10 @@ function startGame() {
         oneCard.addEventListener('click', handleButton)
     })
     countdown()
-
     startElement.disabled = true
 }
+
+
 
 //-----------------------------------------------Event Listener-----------------------------------
 startElement.addEventListener('click', startGame)
